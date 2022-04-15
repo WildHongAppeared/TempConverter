@@ -6,14 +6,14 @@
 4. The terminal should have a message ```App stated on port 3000``` stating that the program has successfully started
 5. If you navigate to localhost:3000 on your web browser, you should see a Hello World! message
 ## API Documentation
-#### Request
+### Request
 If you are running the app locally, you should be able to access the temperature conversion API using the route
 ```POST localhost:3000/temperature/convert/{{type}}```
 ##### URL Parameters
 ```type``` (required) : A string value denoting the type of temperature measurement to convert to. Only accepts values ```fahrenheit``` or ```celsius```
 ##### Body
 ```temperature``` (required) : A numeric value denoting the temperature to convert based on the ```type``` url parameter
-#### Response
+### Response
 Sample Response:
 ```
 {
