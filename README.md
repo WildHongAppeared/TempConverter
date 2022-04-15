@@ -33,6 +33,7 @@ app.listen(3000, () => {
 4. [supertest](https://github.com/visionmedia/supertest) - A HTTP library using [superagent](https://visionmedia.github.io/superagent/) to provide abstraction for testing HTTP APIs. Used to test the routes setup in the project
 ##### Project Structure
 The code for the project is structured as below (Explanation after the image)
+
 ![image](https://user-images.githubusercontent.com/13820671/163561212-4eb9ea0a-1704-4c75-a301-b0f3e1baae19.png)
 1. ```controllers/temperatureController.js```
     a. Contains the logic for the routes in temperatureRouter.js. Ideally there should be one function in the controller corresponding to every route present in temperatureRouter and complex functions should be abstracted to helpers or classes. For this project, this contains the function convertTemperature which is the logic used by the ```/temperature/convert/{{type}}``` route
