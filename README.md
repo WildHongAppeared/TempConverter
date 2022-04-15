@@ -1,11 +1,11 @@
 # TempConverter
-### How to run
+## How to run
 1. Install NodeJS (Version 16 and above) from https://nodejs.org/en/download/
 2. Open a terminal session, navigate into the root directory of the project and run ```npm install```
 3. After the previous command has completed, run ```npm run start``` to start the app
 4. The terminal should have a message ```App stated on port 3000``` stating that the program has successfully started
 5. If you navigate to localhost:3000 on your web browser, you should see a Hello World! message
-### API Doc
+## API Documentation
 If you are running the app locally, you should be able to access the temperature conversion API using the route
 ```POST localhost:3000/temperature/convert/{{type}}```
 ##### URL Parameters
@@ -13,7 +13,7 @@ If you are running the app locally, you should be able to access the temperature
 ##### Body
 ```temperature``` (required) : A numeric value denoting the temperature to convert based on the ```type``` url parameter
 
-### Technical Decisions
+## Technical Decisions
 ##### Framework
 1. The programming language used in this project is NodeJS using the [ExpressJS](https://expressjs.com/) library
 2. The reasoning behind using NodeJS is that the requirements for this project doe not have very complex computation task, which is perfect for NodeJS's asynchronous model. Since there is no need to perform complex computation task, the biggest issue regarding this project would be the scalability which NodeJS has no issue managing due to its non-blocking nature. Another aspect is the event-based model. When using a common language for both client/server-side, synchronization happens fast, which is especially helpful for event-based applications such the current project where you sent a request and expect a transformed output
@@ -27,8 +27,9 @@ app.listen(3000, () => {
 ```
 4. There is no database or ORM used in the project as the purpose of the project is only for computation of temperature and no persistent storage is needed. A caching mechanism such as Redis can be considered if there is very high throughput for this project but with the current requirements, a persistent storage does not bring any added value
 ##### Code Architecture
-
-
+The code for the project is structured as below
+![image](https://user-images.githubusercontent.com/13820671/163561212-4eb9ea0a-1704-4c75-a301-b0f3e1baae19.png)
+The focus here should be on the ```index.js``` under the root directory (above ```package-lock.json``` in the image), the temperatureRouter.js under the routes folder and temperatureController.js under the controllers folder. This represents the large 
 ## Plugins Used
 1. [cheerio](https://cheerio.js.org/) - JQuery for NodeJS 
 
