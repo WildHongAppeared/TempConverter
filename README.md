@@ -44,7 +44,9 @@ Sample Response:
 ```outputType```: A number denoting the converted ```temperature``` type. Only have values of ```fahrenheit``` or ```celsius```
 
 Response structure explanation:
+
 The reason for the complicated separation of structure for such a simple data response is due to the fact that we do not know how the user is going to process the response. Some users might just want the converted value on a human readable format for a quick confirmation but some users might need more detailed data on the number and type converted and they might use the API for the purpose of extracting such data or even for the purpose of integration into other systems. Therefore, it is more useful that we provide a human readable format in the form of ```message``` but also provide more integration friendly format which is why the response also contains more explicit fields such as ```inputValue``` and ```outputType``` which is more "machine" friendly
+
 ## Technical Decisions
 ##### Language & Framework
 1. The programming language used in this project is NodeJS using the [express](https://expressjs.com/) library
