@@ -36,7 +36,7 @@ The code for the project is structured as below (Explanation after the image)
 
 ![image](https://user-images.githubusercontent.com/13820671/163561212-4eb9ea0a-1704-4c75-a301-b0f3e1baae19.png)
 1. ```controllers/temperatureController.js```
-    a. Contains the logic for the routes in temperatureRouter.js. Ideally there should be one function in the controller corresponding to every route present in temperatureRouter and complex functions should be abstracted to helpers or classes. For this project, this contains the function convertTemperature which is the logic used by the ```/temperature/convert/{{type}}``` route
+  a. Contains the logic for the routes in temperatureRouter.js. Ideally there should be one function in the controller corresponding to every route present in temperatureRouter and complex functions should be abstracted to helpers or classes. For this project, this contains the function convertTemperature which is the logic used by the ```/temperature/convert/{{type}}``` route
     b. For this kind of setup, each controller should represent the logic for one API service or "microservice". For example, if we have a new API service that provides distance conversion from KM to Miles and vice versa, here should be a distanceController.js and a corresponding distanceRouter.js. This gives us a clear separation of concern for each API service making it easier to maintain
 2. ```routes/index.js```
     a. Contains the export logic for the routers under the ```routes``` folder, literally acting as an indexing code so that module imports are cleaner from other files
