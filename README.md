@@ -9,6 +9,13 @@
 ### Request
 If you are running the app locally, you should be able to access the temperature conversion API using the route
 ```POST localhost:3000/temperature/convert/{{type}}```
+Sample Request:
+```
+POST localhost:3000/temperature/convert/celsius
+{
+    "temperature": 100
+}
+```
 ##### URL Parameters
 ```type``` (required) : A string value denoting the type of temperature measurement to convert to. Only accepts values ```fahrenheit``` or ```celsius```
 ##### Body
