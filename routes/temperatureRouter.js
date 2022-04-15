@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const TemperatureController = require('./temperatureController')
+const TemperatureController = require('../controllers/temperatureController')
 const router = Router();
 
 router.post('/convert/:convertTo', TemperatureController.convertTemperature);

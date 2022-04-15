@@ -13,14 +13,27 @@ function convertTemperature(req, res){
     if(helper.checkError(temperature)){
         return res.status(400).send(helper.checkError(temperature))
     }
+
     switch(convertTo.toLowerCase()){
         case TEMPERATURE_TYPE.CELSIUS :
-            const celcius = helper.convertFahrenheitToCelcius(req.body.temperature)
-            res.send(req.body.temperature + '\xB0F is ' + celcius + '\xB0C.')
+            const celcius = helper.convertFahrenheitToCelcius(temperature)
+            res.send({ 
+                message: temperature + '\xB0F is ' + celcius + '\xB0C.' ,
+                inputValue: Number(temperature),
+                inputType: TEMPERATURE_TYPE.FAHRENHEIT,
+                outputValue: celcius,
+                outputType: TEMPERATURE_TYPE.CELSIUS
+            })
             break;
         case TEMPERATURE_TYPE.FAHRENHEIT :
             const fahrenheit = helper.convertCelciusToFahrenheit(req.body.temperature)
-            res.send(req.body.temperature + '\xB0C is ' + fahrenheit + '\xB0F.')
+            res.send({
+                message: req.body.temperature + '\xB0C is ' + fahrenheit + '\xB0F.',
+                inputValue: Number(temperature),
+                inputType: TEMPERATURE_TYPE.CELSIUS,
+                outputValue: fahrenheit,
+                outputType: TEMPERATURE_TYPE.FAHRENHEIT
+            })
             break;
         default:
             res.status(400).send(ERRORS.TEMP_TYPE)
