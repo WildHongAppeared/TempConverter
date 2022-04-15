@@ -96,6 +96,7 @@ The code for the project is structured as below (Explanation after the image)
 * Converting Fahrenheit to Celsius
 * Error testing by passing a ```type``` value that is neither ```celsius``` or ```fahrenheit```
 * Error testing by passing a ```temperature``` value that is not an number
+
 This testing strategy gives us a meaningful coverage of the business cases for the temperature conversion service without getting too much into the technical implementation behind the hood
 ## Possible Business Value and Technical Improvements
 1. Allow conversion of multiple values instead of just one value. This will allow user to send a list of temperatures they need converted instead of just one per request, reducing the amount of times they need to call the API
