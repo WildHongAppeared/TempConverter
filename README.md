@@ -32,10 +32,15 @@ Sample Response:
     "outputType": "celsius"
 }
 ```
+
 ```messsage```: string value denoting the converted temperature in a human-readable message
+
 ```inputValue```: A number denoting the ```temperature``` input from request
+
 ```inputType```: A string value denoting the ```temperature``` type to convert from. Only have values of ```fahrenheit``` or ```celsius```
+
 ```outputValue```: A number denoting the converted temperature from the ```temperature``` value from request
+
 ```outputType```: A number denoting the converted ```temperature``` type. Only have values of ```fahrenheit``` or ```celsius```
 
 Response structure explanation:
