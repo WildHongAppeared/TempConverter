@@ -29,7 +29,7 @@ POST ec2-18-237-244-135.us-west-2.compute.amazonaws.com:3000/temperature/convert
 ```
 
 ##### URL Parameters
-```type``` (required) : A string value denoting the type of temperature measurement to convert to. Only accepts values ```fahrenheit``` or ```celsius```
+```type``` (required) : A string value denoting the type of temperature measurement to convert to. Only accepts values ```fahrenheit``` or ```celsius```. If type is passed into the API as ```fahrenheit``, this means that the API will convert from ```celsius``` to ```fahrenheit``` and vice versa
 ##### Body
 ```temperature``` (required) : A numeric value denoting the temperature to convert based on the ```type``` url parameter
 ##### Sample cURL request to server
