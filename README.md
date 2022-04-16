@@ -5,6 +5,8 @@
 3. After the previous command has completed, run ```npm run start``` to start the app
 4. The terminal should have a message ```App stated on port 3000``` stating that the program has successfully started
 5. If you navigate to localhost:3000 on your web browser, you should see a Hello World! message
+6. You can run the test suite by running ```npm run test```
+
 ## API Documentation
 ### Request
 If you are running the app locally, you should be able to access the temperature conversion API using the route
