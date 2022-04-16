@@ -18,17 +18,31 @@ POST localhost:3000/temperature/convert/celsius
     "temperature": 100
 }
 ```
+
+or
+
+```
+POST ec2-18-237-244-135.us-west-2.compute.amazonaws.com:3000/temperature/convert/celsius
+{
+    "temperature": 100
+}
+```
+
 ##### URL Parameters
 ```type``` (required) : A string value denoting the type of temperature measurement to convert to. Only accepts values ```fahrenheit``` or ```celsius```
 ##### Body
 ```temperature``` (required) : A numeric value denoting the temperature to convert based on the ```type``` url parameter
 ##### Sample cURL request to server
 
-```curl.exe --header "Content-Type: application/json" --request POST -d '{\"temperature\": 38.2}' ec2-18-237-244-135.us-west-2.compute.amazonaws.com:3000/temperature/convert/fahrenheit```
+```curl --header "Content-Type: application/json" --request POST -d '{\"temperature\": 38.2}' ec2-18-237-244-135.us-west-2.compute.amazonaws.com:3000/temperature/convert/fahrenheit```
 
 Response: 
 
 ![image](https://user-images.githubusercontent.com/13820671/163660950-86c185bb-b93f-41b9-9496-724701f78209.png)
+
+##### Sample POSTMAN request to server 
+
+![image](https://user-images.githubusercontent.com/13820671/163661017-66365a51-1529-4ef0-88f3-665b18d8482c.png)
 
 ### Response
 Sample Response:
