@@ -36,8 +36,6 @@ POST ec2-18-237-244-135.us-west-2.compute.amazonaws.com:3000/temperature/convert
 
 ```curl --header "Content-Type: application/json" --request POST -d '{\"temperature\": 38.2}' ec2-18-237-244-135.us-west-2.compute.amazonaws.com:3000/temperature/convert/fahrenheit```
 
-Response: 
-
 ![image](https://user-images.githubusercontent.com/13820671/163660950-86c185bb-b93f-41b9-9496-724701f78209.png)
 
 ##### Sample POSTMAN request to server 
